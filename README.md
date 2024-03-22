@@ -1,6 +1,6 @@
-<h1>Project Name</h1>
+<h1>Flluter OTA updater Slient instller </h1>
 
-<p>This function is designed for rooted Android devices.</p>
+<p>This library is designed for checking the version from a web server and downloading the latest version for silent installation. It only works for rooted Android devices.</p>
 
 <h2>Installation</h2>
 
