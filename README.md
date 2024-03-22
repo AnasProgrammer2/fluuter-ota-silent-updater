@@ -1,4 +1,4 @@
-<h1>Flluter OTA updater Slient instller </h1>
+<h1>Flutter OTA Updater Silent Installer</h1>
 
 <p>This library is designed for checking the version from a web server and downloading the latest version for silent installation. It only works for rooted Android devices.</p>
 
