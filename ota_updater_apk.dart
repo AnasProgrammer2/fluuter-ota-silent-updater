@@ -2,9 +2,13 @@ import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
 
+import 'package:advertisement_app/src/core/util/constants.dart';
 import 'package:http/http.dart' as http;
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
+
+const String versionUrl = 'https://domain.com/apk/version.json';
+String apkUrl = 'https://domain.com/apk/app-release.apk'; 
 
 class VersionCheckService {
   static Future<String> showAppVersion() async {
@@ -14,7 +18,6 @@ class VersionCheckService {
   }
 
   static Future<String> getLatestVersion() async {
-    const String versionUrl = 'https://cms.eapiq.com/apk/version.json';
     final response = await http.get(Uri.parse(versionUrl));
     if (response.statusCode == 200) {
       final Map<String, dynamic> data = json.decode(response.body);
@@ -68,7 +71,7 @@ class VersionCheckService {
 
   static Future<void> downloadApk() async {
     // URL of the APK file to be downloaded
-    String apkUrl = 'https://cms.eapiq.com/apk/app-release.apk';
+
     showSnackBar("Start Downloading File");
     try {
       // Send a GET request to fetch the APK file
